@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{024FB54C-5508-438A-85FA-BA51EDAF2B41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Inventory_System</RootNamespace>
+    <AssemblyName>Inventory_System</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\Administrator\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\..\Applications\ITI\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="Exp_Date_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exp_Date_Report.Designer.cs">
+      <DependentUpon>Exp_Date_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_Form.Designer.cs">
+      <DependentUpon>Home_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_Entity.cs" />
+    <Compile Include="ManageProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageProduct.Designer.cs">
+      <DependentUpon>ManageProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageReports.Designer.cs">
+      <DependentUpon>ManageReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageRequests.Designer.cs">
+      <DependentUpon>ManageRequests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageSupplier.Designer.cs">
+      <DependentUpon>ManageSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageWarehouse.Designer.cs">
+      <DependentUpon>ManageWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Measurment.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Product_Period_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product_Period_Report.Designer.cs">
+      <DependentUpon>Product_Period_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product_Report.Designer.cs">
+      <DependentUpon>Product_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ManageClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageClients.Designer.cs">
+      <DependentUpon>ManageClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Request.cs" />
+    <Compile Include="Supplier.cs" />
+    <Compile Include="sysdiagram.cs" />
+    <Compile Include="TransferRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferRequest.Designer.cs">
+      <DependentUpon>TransferRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer_History.cs" />
+    <Compile Include="Transfer_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer_Report.Designer.cs">
+      <DependentUpon>Transfer_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="WareHouse _Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WareHouse _Report.Designer.cs">
+      <DependentUpon>WareHouse _Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse.cs" />
+    <Compile Include="WH_Prod.cs" />
+    <EmbeddedResource Include="Exp_Date_Report.resx">
+      <DependentUpon>Exp_Date_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home_Form.resx">
+      <DependentUpon>Home_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProduct.resx">
+      <DependentUpon>ManageProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageReports.resx">
+      <DependentUpon>ManageReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageRequests.resx">
+      <DependentUpon>ManageRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageSupplier.resx">
+      <DependentUpon>ManageSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageWarehouse.resx">
+      <DependentUpon>ManageWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product_Period_Report.resx">
+      <DependentUpon>Product_Period_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product_Report.resx">
+      <DependentUpon>Product_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ManageClients.resx">
+      <DependentUpon>ManageClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferRequest.resx">
+      <DependentUpon>TransferRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer_Report.resx">
+      <DependentUpon>Transfer_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WareHouse _Report.resx">
+      <DependentUpon>WareHouse _Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Client.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
